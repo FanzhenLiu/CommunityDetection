@@ -1,10 +1,9 @@
-function [x] = PGLP( node_num,el )
-%%Population Generation via Label Propagation(PGLP)
+function [x] = PGLP(node_num, el, iters)
+% Population Generation via Label Propagation(PGLP)
 % el = edges_list(adj_mat,node_num)
 
 x = 1:node_num;
 x = perturbation(x);
-iters = 5;
 for i =1 : iters
 temp_x = x;
 for j = 1 : node_num

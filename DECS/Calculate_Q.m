@@ -1,4 +1,4 @@
-function [chromosome] = Calculate_Q(chromosome,whole_size,num_node,num_edge,adjacent_array)
+function [chromosome] = Calculate_Q(chromosome, whole_size, num_node, num_edge, adjacent_array)
 % calculate the modularity from the genome matrix and chromosome vector, respectively
 % input:
 %       choromosome - all chromosomes in the population

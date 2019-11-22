@@ -21,13 +21,13 @@ GT_Cube = dynMoeaResult;
 
 %% Parameter setting
 maxgen = 100;         % the maximum number of iterations
-pop_size = 100;       % the population size
-num_neighbor = 10;    % the neighbor size for each subproblem
+pop_size = 100;       % the population size  
+num_neighbor = 5;     % the neighbor size for each subproblem in decomposition-based multi-objective optimization
 p_mutation = 0.20;    % the mutation rate
 p_migration = 0.50;   % the migration rate
-p_mu_mi = 0.50;       % the paramater to control the execution of mutation and migration
-num_repeat = 5;         % the number of repeated run
-
+p_mu_mi = 0.50;       % the paramater to organize the execution of mutation and migration
+PGLP_iter = 5;        % the number of iterations in PGLP
+num_repeat = 5;       % the number of repeated run
 
 %% Results at each time step
 dynMod = [];          % modularity of detected community structure
@@ -44,7 +44,7 @@ for r = 1 : num_repeat
     %% DECS only optimizes the modularity at the 1st time step
     timestep_num = 1;
     [dynMod(1,r), dynPop{1,r}, DECS_Result{1,r}, dynTime(1,r)] = ...
-        DECS_1(W_Cube{timestep_num}, maxgen, pop_size, p_mutation, p_migration, p_mu_mi); 
+        DECS_1(W_Cube{timestep_num}, maxgen, pop_size, p_mutation, p_migration, p_mu_mi, PGLP_iter); 
     % calculate NMI for synthetic or real-world networks
     if flag == 1
         % for synthetic networks
@@ -60,7 +60,7 @@ for r = 1 : num_repeat
     for timestep_num = 2 : num_timestep  
         [dynMod(timestep_num,r), dynPop{timestep_num,r}, DECS_Result{timestep_num,r}, ... 
             dynTime(timestep_num,r)] = DECS_2(W_Cube{timestep_num}, maxgen, pop_size, ...
-            p_mutation, p_migration, p_mu_mi, num_neighbor, DECS_Result{timestep_num-1,r});
+            p_mutation, p_migration, p_mu_mi, num_neighbor, DECS_Result{timestep_num-1,r}, PGLP_iter);
         
         if flag == 1
             dynNmi(timestep_num,r) = NMI(DECS_Result{timestep_num,r}, GT_Matrix(:,timestep_num)');

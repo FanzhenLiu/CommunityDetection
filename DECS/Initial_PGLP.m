@@ -1,11 +1,10 @@
-function [chromosome] = Initial_PGLP(population_size, adj_mat, node_num)
+function [chromosome] = Initial_PGLP(population_size, adj_mat, node_num, PGLP_iter)
 % generate the initial population by PGLP
-
 chromosome = struct('genome',{},'clusters',{},'fitness_1',{},'fitness_2',{});
 pop_X = zeros(population_size, node_num);
 for population_id = 1 : population_size
     edgeslist = edges_list(adj_mat, node_num);
-    pop_X(population_id,:) = PGLP(node_num, edgeslist);
+    pop_X(population_id,:) = PGLP(node_num, edgeslist, PGLP_iter);
     temp = adj_mat;
     
     for cluster_id = 1 : max(pop_X(population_id,:))

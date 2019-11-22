@@ -8,11 +8,10 @@ for i = 0:popsize-1
     
     % weight(1) = i/popsize;
     % weight(2) = (popsize-i)/popsize;
-    
     weights = [weights; weight];
 end
 
-%Set up the neighbourhood.
+% Set up the neighborhood
 leng = size(weights,1);
 distanceMatrix = zeros(leng, leng);
 for i=1:leng

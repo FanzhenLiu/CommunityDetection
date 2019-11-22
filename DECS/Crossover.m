@@ -1,5 +1,5 @@
 function [child_chromosome_1,child_chromosome_2] = Crossover(chromosome, selected_pop_id, node_num)
-
+% a pair of selected individuals to generate 2 children individuals
 child_chromosome_1.genome = [];
 child_chromosome_1.clusters = [];
 child_chromosome_1.fitness_1 = [];

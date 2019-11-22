@@ -19,4 +19,3 @@ for i = 1:n
 end
 y = Q/L;
 end
-
