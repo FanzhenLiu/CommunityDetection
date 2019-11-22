@@ -1,6 +1,20 @@
 function [Mod, chromosome, Division, time] = DECS_2(adjacent_array, maxgen, pop_size, ...
-    p_mutation, p_migration, p_mu_mi, num_neighbor, pre_Result)
-% detect the community structure at the  time step
+    p_mutation, p_migration, p_mu_mi, num_neighbor, pre_Result, PGLP_iter)
+% detect the community structure at the time step
+
+% input:  adjacent_array - the adjacent matrix
+%         maxgen - the maximum number of iterations
+%         pop_size - the population size
+%         p_mutation - the mutation rate
+%         p_migration - the migration rate
+%         p_mu_mi - the paramater to organize the execution of mutation and migration
+%         num_neighbor - the neighbor size for each subproblem in decomposition-based multi-objective optimization
+%         pre_Result - the detected community structure at the last time step
+%         PGLP_iter - the number of iterations in PGLP
+% output: Mod - the modularity of the detected community structure
+%         chromosome - chromosomes in the population
+%         Division - the detected community structure
+%         time - running time
 
 global idealp weights neighbors;
 
@@ -25,7 +39,7 @@ EP = [];  % non-dominated solution set
 idealp = -Inf * ones(1,2);  % the reference point (z1,z2)
 % find neighbor solutions to each subproblems
 [weights, neighbors] = init_weight(pop_size,num_neighbor);
-[chromosome] = Initial_PGLP(pop_size, adjacent_array, num_node);
+[chromosome] = Initial_PGLP(pop_size, adjacent_array, num_node, PGLP_iter);
 % calculate the values of modularity and NMI
 [chromosome] = evaluate_objectives(chromosome, pop_size, num_node,...
     num_edge, adjacent_array, pre_Result);
@@ -62,7 +76,7 @@ for t = 1 : maxgen  % the t-th iteration
                 child_chromosome(pop_id+m) = Migration(child_chromosome(pop_id+m), ...
                     num_node, adjacent_array, p_migration);
             end
-            % calculate the coded and decoded modularity, and NMI
+            % calculate the fitness values of clustering results
             child_chromosome(pop_id+m) = evaluate_objectives(child_chromosome(pop_id+m), 1, ...
                 num_node, num_edge, adjacent_array, pre_Result);
             
