@@ -21,12 +21,12 @@ GT_Cube = dynMoeaResult;
 
 %% Parameter setting
 maxgen = 100;         % the maximum number of iterations
-pop_size = 100;       % the population size  
-num_neighbor = 10;    % the neighbor size for each subproblem    
+pop_size = 100;       % the population size
+num_neighbor = 10;    % the neighbor size for each subproblem
 p_mutation = 0.20;    % the mutation rate
 p_migration = 0.50;   % the migration rate
 p_mu_mi = 0.50;       % the paramater to control the execution of mutation and migration
-num_repeat = 1;         % the number of repeated run
+num_repeat = 5;         % the number of repeated run
 
 
 %% Results at each time step
