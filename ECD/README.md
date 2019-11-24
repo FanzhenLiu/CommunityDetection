@@ -34,31 +34,30 @@ Datasets used in this paper can be obtain from the original sources.
 |Cellphone Calls| http://www.cs.umd.edu/hcil/VASTchallenge08/|
 |Enron Mail| http://www.cs.cmu.edu/~enron/|
 
-
 <table>
    <tr>
       <th  colspan="2">Dateset</th>
       <th width="80%" >Source</th>
    </tr>
    <tr>
-      <td width="15%" rowspan="3" >Synthetic datasets</td>
-      <td width="10%"  >SYN-FIX</td>
+      <td style="text-align:center" width="10%" rowspan="3" >Synthetic datasets</td>
+      <td style="text-align:center" width="15%" >SYN-FIX</td>
       <td rowspan="2" >M.-S. Kim and J. Han, “A particle-and-density based evolutionary clustering method for dynamic networks,” Proc. VLDB Endow., vol. 2, no. 1, pp. 622–633, 2009.</td>
    </tr>
    <tr>
-      <td>SYN-VAR</td>
+      <td style="text-align:center" >SYN-VAR</td>
    </tr>
    <tr>
-      <td>SYN-EVENT</td>
+      <td style="text-align:center">SYN-EVENT</td>
       <td>D. Greene, D. Doyle, and P. Cunningham, “Tracking the evolution of communities in dynamic social networks,” in Proc. Int. Conf. Adv. Soc. Netw. Anal. Min. (ASONAM), 2010, pp. 176–183.</td>
    </tr>
    <tr>
-      <td rowspan="2" >Real-world datasets</td>
-      <td >Cellphone Calls</td>
+      <td style="text-align:center" rowspan="2" >Real-world datasets</td>
+      <td style="text-align:center" >Cellphone Calls</td>
       <td>http://www.cs.umd.edu/hcil/VASTchallenge08/</td>
    </tr>
    <tr>
-      <td>Enron Mail</td>
+      <td style="text-align:center" >Enron Mail</td>
       <td>http://www.cs.cmu.edu/~enron/</td>
    </tr>
 </table>
