@@ -61,9 +61,6 @@ Datasets used in this paper can be obtain from the original sources.
       <td>Enron Mail</td>
       <td>http://www.cs.cmu.edu/~enron/</td>
    </tr>
-   <tr>
-      <td></td>
-   </tr>
 </table>
 
 ---------
