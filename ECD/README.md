@@ -41,8 +41,8 @@ Datasets used in this paper can be obtain from the original sources.
       <th width="80%" >Source</th>
    </tr>
    <tr>
-      <td width="10%" rowspan="3" >Synthetic datasets</td>
-      <td width="15%"  >SYN-FIX</td>
+      <td width="15%" rowspan="3" >Synthetic datasets</td>
+      <td width="10%"  >SYN-FIX</td>
       <td rowspan="2" >M.-S. Kim and J. Han, “A particle-and-density based evolutionary clustering method for dynamic networks,” Proc. VLDB Endow., vol. 2, no. 1, pp. 622–633, 2009.</td>
    </tr>
    <tr>
