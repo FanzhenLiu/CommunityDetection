@@ -41,7 +41,7 @@ Datasets used in this paper can be obtain from the original sources.
    </tr>
    <tr>
       <td style="text-align:center">SYN-EVENT</td>
-      <td>D. Greene, D. Doyle, and P. Cunningham, “Tracking the evolution of communities in dynamic social networks,” in Proc. Int. Conf. Adv. Soc. Netw. Anal. Min. (ASONAM), 2010, pp. 176–183.</td>
+      <td>D. Greene, D. Doyle, and P. Cunningham, “Tracking the evolution of communities in dynamic social networks,” in Proc. Int. Conf. Adv. Soc. Netw. Anal. Min. (ASONAM), pp. 176–183, 2010.</td>
    </tr>
    <tr>
       <td style="text-align:center" rowspan="2" >Real-world datasets</td>
