@@ -9,8 +9,9 @@ If you find this method helpful for your research, please cite this paper.
     	author = {Fanzhen Liu and Jia Wu and Shan Xue and Chuan Zhou and Jian Yang and Quanzheng Sheng},
     	journal = {World Wide Web},
     	title = {Detecting the Evolving Community Structure in Dynamic Social Networks},
-    	year = {2019},
-    	pages = {},
+    	year = {2020},
+        volume = {23},
+    	pages = {715-733},
     	doi = {10.1007/s11280-019-00710-z}
     }
 
